@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+//import Paper from "./paper";
+import "./App.css";
+import WindowSize from "./window";
+import Layout from "./layout";
+//import Todos from "./todos";
 
 function App() {
+
+  const size = WindowSize();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {size.width}px / {size.height}px
+      <Layout />
     </div>
   );
 }
