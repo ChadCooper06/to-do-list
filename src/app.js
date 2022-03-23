@@ -1,20 +1,24 @@
-import React from "react";
-//import Paper from "./paper";
+import React, { useState } from "react";
+
 import "./App.css";
-import WindowSize from "./window";
+//import WindowSize from "./window";
 import Layout from "./layout";
-//import Todos from "./todos";
+import { Todos } from "./todos";
+import { ToDoList } from "./toDoList";
 
-function App() {
 
-  const size = WindowSize();
+export default function App() {
 
+  const [userInput, setToDoList] = useState('');
+  const [todos, setTodos] = useState([]);
+  //const size = WindowSize();
+ 
   return (
     <div className="App">
-      {size.width}px / {size.height}px
+      {/* {size.width}px / {size.height}px */}
+      
       <Layout />
+      
     </div>
   );
 }
-
-export default App;

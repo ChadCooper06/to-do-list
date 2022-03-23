@@ -1,25 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { getLocalStorage, setLocalStorage } from './localStorage';
+import React from 'react';
+
+export const Todos = ({ text }) => {
 
 
-
-export default function Todos() {
-    const [todos, setTodos] = useState([]);
-
-    useEffect(() => {
-        let data = getLocalStorage(todos);
-        if (data.length > 0) {
-          setTodos(data);
-        } else {
-          getData(todos)
-            .then((data) => {
-              setTodos(data);
-              setLocalStorage(todos, data);
-            })
-        }
-      }, []);
-
-  return (
-    <div>todos here</div>
-  )
+    return(
+        <div className='list-container'>
+            <li className='list'>
+                {text}
+            </li>
+        
+        </div>
+    )
 }
