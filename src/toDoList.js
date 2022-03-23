@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css'
 import { Todos } from './todos';
 
-export const ToDoList = ({ todos }) => {
+export default function ToDoList({ todos }) {
     
     return (
         <div className="todo-container">
