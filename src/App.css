@@ -1,0 +1,22 @@
+.app{
+    align-content: center;
+}
+.toDoPage{
+    background-color: gainsboro;
+    width: 80vw;
+}
+.title{
+    font-size: 8rem;
+    font-weight: bold;
+    font-family: cursive;
+    text-align: center;
+    color:rgb(18, 4, 146);
+}
+.inputDiv{
+    align-items: center;
+}
+.inputBox{
+    width: 50%;
+    padding: 1rem 1rem;
+    margin: .5rem 5rem;
+}
