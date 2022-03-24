@@ -1,20 +1,17 @@
 import React from "react";
 import "./App.css";
+import Button from "./button";
 
 
 export default function Paper({ input, setInput, todos, setTodos }) {
 	
     const onInput = (e) => {
         
-        if(!text) {
-            alert('Please add a task');
-            return;
-        }
             //console.log(e.target.value)
         setInput(e.target.value);
         }
     
-    const onSubmit = (e) => {
+    const onClick = (e) => {
         
         //console.log(e.target.value);
     setInput(e.target.value);
@@ -32,6 +29,7 @@ export default function Paper({ input, setInput, todos, setTodos }) {
     return (
         <div className="paper">
             <h2 className= 'title'>To-Do List</h2>
+            <div className='add-task'>
             <input
                 type='text'
                 id='userInput'
@@ -41,11 +39,13 @@ export default function Paper({ input, setInput, todos, setTodos }) {
                 className='input'
                 onChange={onInput}
             />
-            <button className='addBtn' onClick={onSubmit}>Add</button>
+            <Button text='Add Me!' onClick={onClick} />
+            
+        </div>
             <div className="selectors">
-                <button className="all">All</button>
-                <button className="active">Active</button>
-                <button className="done">Done</button>
+                <Button color='green' text='All' onClick={onClick} />
+                <Button color='green' text='active' onClick={onClick} />
+                <Button color='green' text='done' onClick={onClick} />
             </div>
         </div>
     );

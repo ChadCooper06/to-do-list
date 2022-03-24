@@ -36,3 +36,12 @@
     border: 2px solid black;
     font-size: 2rem;
 }
+.add-task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+Button{
+    font-size: 1rem;
+    width: 20vw;
+}
