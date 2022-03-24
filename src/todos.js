@@ -5,9 +5,9 @@ export const Todos = ({ text }) => {
 
     return(
         <div className='list-container'>
-            <li className='list'>
+            <div className='list'>
                 {text}
-            </li>
+            </div>
         
         </div>
     )

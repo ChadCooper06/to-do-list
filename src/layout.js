@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Paper from "./paper";
 import PageBottom from "./bottom";
 import ToDoList from "./toDoList";
+//import { getLocalStorage, set } from "../utils/localStorage";
 
 export default function Layout() {
 
@@ -14,7 +15,8 @@ export default function Layout() {
 				input={input}
 				setInput={setInput} 
 				todos={todos}
-				setTodos={setTodos}/>
+				setTodos={setTodos}
+            />
             <ToDoList todos={todos}/>
             <PageBottom />
         </div>
