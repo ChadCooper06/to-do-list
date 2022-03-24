@@ -30,5 +30,3 @@ export default function PageBottom() {
     )
     
 };
-
-//npm install react icons
