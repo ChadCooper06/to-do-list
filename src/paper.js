@@ -7,24 +7,20 @@ export default function Paper({ input, setInput, todos, setTodos }) {
 	
    
     const onInput = (e) => {
-        
-            //console.log(e.target.value)
         setInput(e.target.value);
         }
     
     const onClick = (e) => {
-        
-        //console.log(e.target.value);
-    setInput(e.target.value);
-    setTodos([
-        ...todos,
-        {
-            text: input,
-            completed: false,
-            id: Math.floor(Date.now())
-        }
-    ]);
-    setInput('');
+        setInput(e.target.value);
+        setTodos([
+            ...todos,
+            {
+                text: input,
+                completed: false,
+                id: Math.floor(Date.now())
+            }
+        ]);
+        setInput('');
     };
     
     return (
@@ -40,6 +36,7 @@ export default function Paper({ input, setInput, todos, setTodos }) {
                 className='input'
                 onChange={onInput}
             />
+            
             <Button text='Add Me!' onClick={onClick} />
             
         </div>

@@ -1,19 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+//import { getLocalStorage, setLocalStorage } from './localStorage';
 import {FaTimes} from 'react-icons/fa';
 
 export const Todos = ({ text }) => {
 
+    //const [inputText, setInputText] = useState('')
     const [todos, setTodos] = useState([])
+    
    
-    const deleteHandler = () => {
-        setTodos(todos.filter(item => item.id !== todos.id))
-     
-     }
-       
      const checkHandler = () => {
        todos.completed === false ? (todos.completed = true) :
        (todos.completed = false)
      }
+
+     const deleteHandler = () => {
+
+     }
+    
+//   useEffect(() => {
+//     let data = getLocalStorage();
+//     if (data.length > 0) {
+//       setTodos(data);
+//     } else {
+//       getData()
+//         .then((data) => {
+//           setTodos(data);
+//           setLocalStorage(data);
+//         })
+//     }
+//   }, []);
 
     return(
         <div className='list-container'>
