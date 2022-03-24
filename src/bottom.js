@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Button from "./button";
 
 export default function PageBottom() {
 
@@ -24,7 +25,7 @@ export default function PageBottom() {
     return(
         <div className='bottom'>
             <div className="counter">Numbers</div>
-            <button className="clearAll">Clear All</button>
+            <Button className="clearAll" text='Erase' />
         </div>
     )
     

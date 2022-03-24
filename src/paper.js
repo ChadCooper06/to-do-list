@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Button from "./button";
 
 
 export default function Paper({ input, setInput, todos, setTodos }) {
 	
+   
     const onInput = (e) => {
         
             //console.log(e.target.value)
@@ -44,8 +45,8 @@ export default function Paper({ input, setInput, todos, setTodos }) {
         </div>
             <div className="selectors">
                 <Button color='green' text='All' onClick={onClick} />
-                <Button color='green' text='active' onClick={onClick} />
-                <Button color='green' text='done' onClick={onClick} />
+                <Button color='green' text='Active' onClick={onClick} />
+                <Button color='green' text='Done' onClick={onClick} />
             </div>
         </div>
     );
