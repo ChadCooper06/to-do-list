@@ -1,0 +1,51 @@
+.app{
+    align-content: center;
+}
+.paper{
+    background-color: gainsboro;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-size: 8rem;
+    font-weight: bold;
+    font-family: cursive;
+    text-align: center;
+    color:rgb(18, 4, 146);
+}
+.input{
+    width: 50%;
+    padding: 1rem 1rem;
+    margin: .5rem 5rem;
+    font-size: 1.5rem;
+}
+.selectors{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-flow: row;
+    column-gap: 10px;
+}
+.bottom{
+    display: flexbox;
+    flex-wrap: nowrap;
+}
+.counter{
+    height: auto;
+    width: fit-content;
+    border: 2px solid black;
+    font-size: 2rem;
+}
+.add-task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+Button{
+    font-size: 1rem;
+    width: 20vw;
+}
+.clearAll{
+    font-size: 1rem;
+    width: 20vw;
+}
