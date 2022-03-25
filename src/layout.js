@@ -14,7 +14,7 @@ export default function Layout() {
     //parses todos from local storage
     useEffect(() => {
         if (localStorage.getItem("todos")) {
-          setTodos(JSON.parse(localStorage.getItem("todos")));
+            setTodos(JSON.parse(localStorage.getItem("todos")));
         }
     }, []);
 

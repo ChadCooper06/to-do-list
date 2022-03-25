@@ -27,14 +27,6 @@ export default function Paper({ input, setInput, todos, setTodos }) {
         };
     }
 
-    // const filterTodos = todos;
-  
-    // if(filter === "active") {
-    //    filterTodos = todos.filter((todo) => !todo.done);
-    // } else if(filter === "done") {
-    //    filterTodos = todos.filter((todo) => todo.done);
-    // }
-
     //draws my input, adds fns to it and draws my buttons below-theyre not working yet
     return (
         <div className="paper">

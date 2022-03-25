@@ -6,9 +6,12 @@ export default function PageBottom( todos, setTodos ) {
     const counter = () => {
         setCount(todos.filter(todos => todos.done == true)).length;
     }
-
+    //deletes everything in the list-doesn't break the app so leaving here to complete later
     const deleteHandler = () => {
-        setTodos(todos.filter(todo => todo.id !== todos.id))
+        setTodos(todos.forEach(todo => todo.id !== id));
+        return(
+            todos = ''
+        )
     }
     
 
