@@ -1,6 +1,6 @@
 import "./App.css";
 //import { useState } from "react";
-import Button from "./button";
+import Button from "./Button";
 
 
 
@@ -50,10 +50,15 @@ export default function Paper({ input, setInput, todos, setTodos }) {
                 onKeyDown={submitHandler} />
             </div>
             <div className="status-btns">
-                <Button id='all' color='green' text='All' onClick={() => setFilter('all')} />
-                <Button id='active' color='green' text='active' onClick={() => setFilter('active')} />
-                <Button id='done' color='green' text='done' onClick={() => setFilter('done')} />
+                <Button id='all' color='grey' text='All' onClick={() => setFilter("all")} />
+                <Button id='active' color='grey' text='active' onClick={() => setFilter("active")} />
+                <Button id='done' color='grey' text='done' onClick={() => setFilter("done")} />
             </div>
         </div>
     );
 };
+
+//                 <Button id='all' color='green' text='All' onClick={() => setState({view: 1}))} />
+//                 <Button id='active' color='green' text='active' onClick={() => setState({view: 2})} />
+//                 <Button id='done' color='green' text='done' onClick={() => setState({view: 3})} />
+// {this.state.view === 1 ? <View1/> : this.state.view === 2 ? <View2/> : this.state.view === 3 ? <View3/> : ""}

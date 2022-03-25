@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Layout from "./layout";
+import Layout from "./Layout";
 
 
 export default function App() {

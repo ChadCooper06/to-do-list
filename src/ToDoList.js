@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Todos from './todos';
+import Todos from './Todos';
 
 //creates the to do list of the to-dos
 const ToDoList = ({ todos, setTodos }) => {

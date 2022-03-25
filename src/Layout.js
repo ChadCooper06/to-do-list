@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Paper from "./paper";
-import PageBottom from "./bottom";
-import ToDoList from "./toDoList";
+import Paper from "./Paper";
+import PageBottom from "./Bottom";
+import ToDoList from "./ToDoList";
 //import { useLocalStorage } from "../useLocalStorage";
 
 export default function Layout() {

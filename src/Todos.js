@@ -2,7 +2,7 @@ import React from 'react';
 import {FaTimes} from 'react-icons/fa';
 
 
-export default function Todos ({ text, todo, todos, setTodos }) {
+export default function Todos ({ todo, todos, setTodos }) {
     
     //activates when the checkbox is clicked
     const checkHandler = () => {
