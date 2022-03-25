@@ -9,7 +9,7 @@ export default function PageBottom() {
 
     return(
         <div className='bottom'>
-            <div className="counter">{counter}Items left to do</div>
+            <div className="counter">Items left to do</div>
             <button className="clearAll">Clear All</button>
         </div>
     )

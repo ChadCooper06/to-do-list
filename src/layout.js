@@ -15,7 +15,7 @@ export default function Layout() {
         if (localStorage.getItem("todos")) {
           setTodos(JSON.parse(localStorage.getItem("todos")));
         }
-      }, []);
+    }, []);
 
     useEffect(() => {
         localStorage.setItem("todos", JSON.stringify(todos));
@@ -24,13 +24,13 @@ export default function Layout() {
     return(
         <div className="layout">
             <Paper 
-            todos={todos}
-            setTodos={setTodos}
-            input={input}
-            setInput={setInput} />
+                todos={todos}
+                setTodos={setTodos}
+                input={input}
+                setInput={setInput} />
             <ToDoList 
-            todos={todos} 
-            setTodos={setTodos} />
+                todos={todos} 
+                setTodos={setTodos} />
             <PageBottom />
         </div>
     )

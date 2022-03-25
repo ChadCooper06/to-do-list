@@ -7,33 +7,33 @@ import Button from "./button";
 export default function Paper({ input, setInput, todos, setTodos }) {
 
     //places the value input by user to the text input
-    const [filter, setFilter] = useState('all')
+    const [filter, setFilter] = useState('all');
     const inputHandler = (e) => {
-        setInput(e.target.value)
-     }
-     //on clicking enter, this sets my todo to the given input and gives the time as an id
-     //used empty string at end to clear input field after entering
-     const submitHandler = (e) => {
-         if(e.key === 'Enter') {
-             setTodos([
-                 ...todos,
-                 {
-                     text: input,
-                     done: false,
-                     id: Date.now(),
-                 }
-             ])
-             setInput('')
-         }
-     }
+        setInput(e.target.value);
+    }
+    //on clicking enter, this sets my todo to the given input and gives the time as an id
+    //used empty string at end to clear input field after entering
+    const submitHandler = (e) => {
+        if(e.key === 'Enter') {
+            setTodos([
+                ...todos,
+                {
+                    text: input,
+                    done: false,
+                    id: Date.now(),
+                }
+            ])
+            setInput('')
+        };
+    }
 
-     const filterTodos = todos;
+    const filterTodos = todos;
   
-     if (filter === "active") {
+    if(filter === "active") {
        filterTodos = todos.filter((todo) => !todo.done);
-     } else if (filter === "done") {
+    } else if(filter === "done") {
        filterTodos = todos.filter((todo) => todo.done);
-     }
+    }
 
     //draws my input, adds fns to it and draws my buttons below-theyre not working yet
     return (
