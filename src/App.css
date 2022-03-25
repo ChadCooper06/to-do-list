@@ -1,8 +1,13 @@
+html{
+    background-color: rgb(243, 243, 230);
+}
 .app{
     align-content: center;
 }
+/* the visible page*/
 .paper{
-    background-color: gainsboro;
+    background-color: rgb(238, 237, 230);
+    background-image: url("https://images.unsplash.com/photo-1601662528567-526cd06f6582?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFwZXIlMjBzaGVldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
     justify-content: center;
     align-items: center;
 }
@@ -14,21 +19,24 @@
     color:rgb(18, 4, 146);
 }
 .input{
-    width: 50%;
+    width: 60%;
     padding: 1rem 1rem;
     margin: .5rem 5rem;
     font-size: 1.5rem;
 }
-.selectors{
+.status-btns{
     align-items: center;
     justify-content: center;
     display: flex;
     flex-flow: row;
-    column-gap: 10px;
+    column-gap: 15px;
+    margin-bottom: 5px;
 }
 .bottom{
-    display: flexbox;
+    margin-top: 10px;
+    display: flex;
     flex-wrap: nowrap;
+    justify-content: space-between;
 }
 .counter{
     height: auto;
@@ -44,8 +52,47 @@
 Button{
     font-size: 1rem;
     width: 20vw;
+    border-radius: 50px;
+    cursor: pointer;
 }
 .clearAll{
     font-size: 1rem;
     width: 20vw;
+    background-color: firebrick;
+    color: white;
+}
+.clearAll:hover{
+    background-color: lightcoral;
+}
+/* this appears once input has been made*/
+.list{
+    display: flex;
+    border: 1px solid black;
+    padding: 1px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(238, 237, 230);
+    background-image: url("https://images.unsplash.com/photo-1601662528567-526cd06f6582?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGFwZXIlMjBzaGVldHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+}
+.todo{
+    font-size: 1.5rem;
+    color: rgb(18, 4, 146);
+    font-family: cursive;
+    margin: 5px;
+}
+.check{
+    transform: scale(2);
+    margin-right: 20px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+/* .list-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+} */
+.delete{
+    color:red;
+    font-size: 2rem;
 }

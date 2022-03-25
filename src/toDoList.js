@@ -1,16 +1,20 @@
 import React from 'react';
-import './App.css'
-import { Todos } from './todos';
+import './App.css';
+import Todos from './todos';
 
-export default function ToDoList({ todos }) {
-        //maps over the array of todos(even if empty) and displays them 
+//creates the to do list of the to-dos
+const ToDoList = ({ todos, setTodos }) => {
     return (
         <div className="todo-container">
             <div className="todo-list">
                {todos.map((todo) => (
-                   <Todos key={todo.id} text={todo.text} />
+                   <Todos key={todo.id} 
+                   todo={todo} 
+                   todos={todos} 
+                   setTodos={setTodos} />
                ))}
             </div>
         </div>
     ) 
 }
+export default ToDoList
