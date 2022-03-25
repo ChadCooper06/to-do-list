@@ -1,46 +1,35 @@
-import React, { useState, useEffect } from 'react';
-//import { getLocalStorage, setLocalStorage } from './localStorage';
+import React from 'react';
 import {FaTimes} from 'react-icons/fa';
 
-export const Todos = ({ text }) => {
-
-    //const [inputText, setInputText] = useState('')
-    const [todos, setTodos] = useState([])
+export default function Todos ({ todo, todos, setTodos }) {
     
-   
-     const checkHandler = () => {
-       todos.completed === false ? (todos.completed = true) :
-       (todos.completed = false)
-     }
+    //activates when the checkbox is clicked
+    const checkHandler = () => {
+        (todo.done === false) ? (todo.done === true) : (todo.done === false); 
+    }
 
-     const deleteHandler = () => {
-
-     }
+    //activates when my X icon is clicked and deletes the to-do
+    const deleteHandler = () => {
+        setTodos(todos.filter(item => item.id !== todo.id))
+    }
     
-//   useEffect(() => {
-//     let data = getLocalStorage();
-//     if (data.length > 0) {
-//       setTodos(data);
-//     } else {
-//       getData()
-//         .then((data) => {
-//           setTodos(data);
-//           setLocalStorage(data);
-//         })
-//     }
-//   }, []);
 
     return(
         <div className='list-container'>
             <div className='list'>
-                <input type='checkbox' className='check' onClick={checkHandler}></input>
-                {text} 
+                <input type='checkbox' 
+                className='check' 
+                onClick={checkHandler} 
+                defaultChecked={false} 
+                />
+                <h3 className='todo'>{todos.value}</h3>
                 <FaTimes 
+                type='button'
+                className='delete'
                 style={{justifyContent: 'space-between'}} 
                 onClick={() => deleteHandler(todos)} 
                 />
             </div>
-        
         </div>
     )
 }

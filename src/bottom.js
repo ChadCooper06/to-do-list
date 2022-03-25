@@ -1,31 +1,16 @@
-import React, { useState, useEffect } from "react";
-import Button from "./button";
+import React from "react";
 
 export default function PageBottom() {
 
-    // const [counter, setCounter] = useState(0);
-    // const onClick = (e) => {
+    const counter = () => {
+        setCount(todos.filter(todos => todos.done == true)).length;
+    }
 
-    // }
-    // // const counterChange1 = {handleSubmit} => {
-    // //     setCounter(counter + 1);
-    // // }
-    // // const counterChange2 = (e) => {
-    // //     setCounter(counter - 1);
-    // // }
-
-    // useEffect((onClick) => {
-    //     function counterIncrement() {
-    //         setCounter(counter + 1);
-    //     }
-
-    //     counterIncrement();
-    // });
 
     return(
         <div className='bottom'>
-            <div className="counter">Numbers</div>
-            <Button className="clearAll" text='Erase' />
+            <div className="counter">{counter}Items left to do</div>
+            <button className="clearAll">Clear All</button>
         </div>
     )
     
