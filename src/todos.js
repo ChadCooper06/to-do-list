@@ -14,6 +14,7 @@ export default function Todos ({ text, todo, todos, setTodos }) {
         setTodos(todos.filter(item => item.id !== todo.id))
     }
     
+    //this is the format of the todos themselves
     return(
         <div className='list-container'>
             <div className='list'>
@@ -22,9 +23,9 @@ export default function Todos ({ text, todo, todos, setTodos }) {
                     onClick={checkHandler} 
                     defaultChecked={false} 
                 />
-                <>
-                {text}
-                </>
+                <h4 className='todo'>
+                {todo.text}
+                </h4>
                 <FaTimes 
                     type='button'
                     className='delete'

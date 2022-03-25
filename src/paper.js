@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+//import { useState } from "react";
 import Button from "./button";
 
 
@@ -7,7 +7,7 @@ import Button from "./button";
 export default function Paper({ input, setInput, todos, setTodos }) {
 
     //places the value input by user to the text input
-    const [filter, setFilter] = useState('all');
+    //const [filter, setFilter] = useState('all');
     const inputHandler = (e) => {
         setInput(e.target.value);
     }
@@ -27,13 +27,13 @@ export default function Paper({ input, setInput, todos, setTodos }) {
         };
     }
 
-    const filterTodos = todos;
+    // const filterTodos = todos;
   
-    if(filter === "active") {
-       filterTodos = todos.filter((todo) => !todo.done);
-    } else if(filter === "done") {
-       filterTodos = todos.filter((todo) => todo.done);
-    }
+    // if(filter === "active") {
+    //    filterTodos = todos.filter((todo) => !todo.done);
+    // } else if(filter === "done") {
+    //    filterTodos = todos.filter((todo) => todo.done);
+    // }
 
     //draws my input, adds fns to it and draws my buttons below-theyre not working yet
     return (
