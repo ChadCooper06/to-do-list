@@ -6,7 +6,7 @@ export default function Todos ({ todo, todos, setTodos }) {
     
     //activates when the checkbox is clicked
     const checkHandler = () => {
-        (todo.done === false) ? (todo.done === true) : (todo.done === false); 
+        return (todo.done === false) ? (todo.done === true) : (todo.done === false); 
     }
 
     //activates when my X icon is clicked and deletes the to-do

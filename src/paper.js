@@ -1,6 +1,6 @@
 import "./App.css";
 //import { useState } from "react";
-import Button from "./button";
+//import Button from "./button";
 
 
 
@@ -41,11 +41,11 @@ export default function Paper({ input, setInput, todos, setTodos }) {
                 onChange={inputHandler} 
                 onKeyDown={submitHandler} />
             </div>
-            <div className="status-btns">
+            {/* <div className="status-btns">
                 <Button id='all' color='grey' text='All' onClick={() => setFilter("all")} />
                 <Button id='active' color='grey' text='active' onClick={() => setFilter("active")} />
                 <Button id='done' color='grey' text='done' onClick={() => setFilter("done")} />
-            </div>
+            </div> */}
         </div>
     );
 };
